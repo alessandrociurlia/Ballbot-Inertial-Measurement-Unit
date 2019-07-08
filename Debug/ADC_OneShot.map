@@ -1,0 +1,95 @@
+Renesas Optimizing Linker (W2.07.00 )             22-Mar-2018 09:49:19
+
+*** Options ***
+
+-noprelink
+-subcommand=LinkerSubCommand.tmp
+-input=".\r_bsp/board/rdkrx63n\lowlvl.obj"
+-input=".\r_bsp/board/rdkrx63n\dbsct.obj"
+-input=".\r_bsp/board/rdkrx63n\flash_options.obj"
+-input=".\r_bsp/board/rdkrx63n\hwsetup.obj"
+-input=".\r_bsp/board/rdkrx63n\lcd.obj"
+-input=".\r_bsp/board/rdkrx63n\lowsrc.obj"
+-input=".\r_bsp/board/rdkrx63n\resetprg.obj"
+-input=".\r_bsp/board/rdkrx63n\sbrk.obj"
+-input=".\r_bsp/board/rdkrx63n\vecttbl.obj"
+-input=".\r_glyph/src/glyph/drivers\st7579_lcd.obj"
+-input=".\r_glyph/src/glyph/fonts\font_8x8.obj"
+-input=".\r_glyph/src/glyph\glyph.obj"
+-input=".\r_glyph/src\r_glyph.obj"
+-input=".\r_glyph/src\r_glyph_register.obj"
+-input=".\r_riic_rx600/src\r_riic_rx600.obj"
+-input=".\r_riic_rx600/src\r_riic_rx600_master.obj"
+-input=".\r_rspi_rx600/src\r_rspi_rx600.obj"
+-input=".\src\CMT.obj"
+-input=".\src\IMU.obj"
+-input=".\src\S12ADC.obj"
+-input=".\src\main.obj"
+-library=".\ADC_OneShot.lib"
+-start=SI,SU,B_1,R_1,B_2,R_2,B,R/0,C_1,C_2,C,C$*,L*,D*,P,W*/0FFF80000,FIXEDVECT/0FFFFFF90
+-output=ADC_OneShot.abs
+-form=absolute
+-nomessage
+-list=ADC_OneShot.map
+-nooptimize
+-nologo
+-nologo
+-nomessage
+-rom=D=R,D_1=R_1,D_2=R_2
+-vect=_undefined_interrupt_source_isr
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+SI
+                                  00000000  000003ff       400   4
+SU
+                                  00000400  000013ff      1000   4
+B_1
+                                  00001400  00001427        28   1
+R_1
+                                  00001428  0000148b        64   1
+B_2
+                                  0000148c  0000148c         0   1
+R_2
+                                  0000148c  00001499         e   2
+B
+                                  0000149c  000019bb       520   4
+R
+                                  000019bc  00002197       7dc   4
+$ADDR_C_FF7FFFE8
+                                  ff7fffe8  ff7fffff        18   1
+C_1
+                                  fff80000  fff80ad1       ad2   1
+C_2
+                                  fff80ad2  fff80cd3       202   2
+C
+                                  fff80cd4  fff80d93        c0   4
+C$DSEC
+                                  fff80d94  fff80db7        24   4
+C$BSEC
+                                  fff80db8  fff80dcf        18   4
+C$VECT
+                                  fff80dd0  fff811cf       400   4
+L
+                                  fff811d0  fff812b0        e1   4
+D
+                                  fff812b4  fff81a8f       7dc   4
+D_1
+                                  fff81a90  fff81af3        64   1
+D_2
+                                  fff81af4  fff81b01         e   2
+P
+                                  fff81b02  fff85b68      4067   1
+W
+                                  fff85b6c  fff85b6c         0   4
+W_1
+                                  fff85b6c  fff85b7d        12   1
+W_2
+                                  fff85b7e  fff85b7e         0   2
+$ADDR_C_FFFFFF80
+                                  ffffff80  ffffff8f        10   1
+FIXEDVECT
+                                  ffffff90  ffffffff        70   4
